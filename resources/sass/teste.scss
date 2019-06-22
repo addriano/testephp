@@ -1,0 +1,18 @@
+#app {
+    .container {
+        
+        .breadcrumb {
+            position: relative;
+            .bt-novo {
+                position: absolute;
+                right: 12px;
+                top: 5px;
+            }
+        }
+
+        .table { display:table; }
+        .table-row { display:table-row; }
+        .table-cell { display:table-cell; }
+
+    }
+}
