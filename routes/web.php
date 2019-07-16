@@ -32,4 +32,6 @@ Route::prefix('fornecedores')->group(function () {
     Route::get('/empresa/{id}', 'app\FornecedoresController@index');
     Route::get('/empresa/{id}/novo', 'app\FornecedoresController@new');
     Route::post('/empresa/{id}', 'app\FornecedoresController@create');
+    Route::get('/{fid}/empresa/{id}/editar', 'app\FornecedoresController@edit');
+    Route::post('/{fid}/empresa/{id}/editar', 'app\FornecedoresController@update');
 });

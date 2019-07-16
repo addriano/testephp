@@ -34,4 +34,19 @@ class FornecedoresController extends Controller
         $fornecedor->save();
         return redirect('fornecedores/empresa/'.$id);
     }
+
+    public function edit($idForn, $idEmpresa)
+    {
+        $fornecedor = Fornecedores::find($idForn);
+        $empresas = Empresa::all();
+        return view('fornecedores.edit', compact('fornecedor', 'empresas'));
+    }
+
+    public function update(Request $request, $idForn, $idEmpresa){
+        $fornecedor = Fornecedores::find($idForn);
+        $fornecedor->fill($request->all());
+        $fornecedor->save();
+        return redirect('fornecedores/empresa/'.$idEmpresa);
+
+    }
 }

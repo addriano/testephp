@@ -32,7 +32,7 @@
                             </td>
                             <td>{{ date_format($forn->created_at, "d/m/Y H:i:s") }}</td>
                             <td>
-                                <a class="btn btn-success" href="#">Editar</a>
+                                <a class="btn btn-success" href="{{url('fornecedores/'.$forn->id.'/empresa/'.$forn->id_empresa.'/editar')}}">Editar</a>
                                 <a class="btn btn-info" href="#">Fornecedores</a>
                                 <a class="btn btn-danger" href="#">Excluir</a>
                             </td>
